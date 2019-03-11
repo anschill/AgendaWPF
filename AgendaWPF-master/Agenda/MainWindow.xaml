@@ -1,0 +1,31 @@
+﻿<Window x:Class="Agenda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Agenda"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Height="442" VerticalAlignment="Top" Background="Bisque"></Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top" Background="AntiqueWhite">
+                <MenuItem Header="_Clients">
+                    <MenuItem x:Name="ItemListCustomers" Header="_Afficher la liste" Click="ItemListCustomers_Click" />
+                    <MenuItem x:Name="ItemAddCustomer" Header="_Ajouter un client" Click="ItemAddCustomer_Click" />
+                </MenuItem>
+                <MenuItem Header="_Courtiers">
+                    <MenuItem Header="_Afficher la liste" />
+                    <MenuItem Header="_Ajouter un courtier" />
+                </MenuItem>
+                <MenuItem Header="_Rendez-vous">
+                    <MenuItem Header="_Afficher la liste" />
+                    <MenuItem Header="_Ajouter un rendez-vous" />
+                </MenuItem>
+            </Menu>
+            <StackPanel>
+                <Frame Content="" NavigationUIVisibility="Hidden" Height="397" x:Name="DisplayPage" Background="White" />
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>
